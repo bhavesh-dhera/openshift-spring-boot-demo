@@ -6,15 +6,5 @@ spec:
         - name: GREETING_MESSAGE
           valueFrom:
             configMapKeyRef:
-              name: openshift-spring-boot-demo-config-map
+              name: hello-world
               key: greeting.message
-        - name: GREETING_SECRET
-          valueFrom:
-            secretKeyRef:
-              name: openshift-spring-boot-demo-secret
-              key: greeting.secret
-        - name: JWT_SECRET
-          valueFrom:
-            secretKeyRef:
-              name: openshift-spring-boot-demo-secret
-              key: jwt.secret
