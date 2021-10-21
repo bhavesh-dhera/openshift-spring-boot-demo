@@ -1,12 +1,15 @@
 spring.cloud.kubernetes.config.name: openshift-spring-boot-demo-config-map
 
 spring:
-  cloud.kubernetes.reload:
-    enabled: true
-    strategy: restart_context
-    sources:
-          - namespace: demo
-            name: hello-world
+  cloud.kubernetes:
+    reload:
+      enabled: true
+      strategy: restart_context
+    config:
+      enabled: true
+      sources:
+            - namespace: demo
+              name: hello-world
 
 management:
   endpoint:
