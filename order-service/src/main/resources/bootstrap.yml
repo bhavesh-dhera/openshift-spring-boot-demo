@@ -4,6 +4,9 @@ spring:
   cloud.kubernetes.reload:
     enabled: true
     strategy: restart_context
+    sources:
+          - namespace: demo
+            name: hello-world
 
 management:
   endpoint:
