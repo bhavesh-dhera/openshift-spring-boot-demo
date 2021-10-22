@@ -9,5 +9,4 @@ spring:
         period: 5000
       config:
         sources:
-          - name: other
           - name: ${spring.application.name}
