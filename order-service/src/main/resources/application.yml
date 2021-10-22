@@ -1,14 +1,8 @@
-spring:
-  application:
-    name: order-service
-
 management:
-  endpoints:
-    web:
-      exposure.include: '*'
   endpoint:
+    restart:
+      enabled: true
     health:
-      show-details: ALWAYS
-  info:
-    git:
-      mode: full
+      enabled: true
+    info:
+      enabled: true

@@ -1,15 +1,13 @@
 spring:
-  cloud.kubernetes:
-    reload:
-      enabled: true
-      strategy: restart_context
-    config:
-      enabled: true
-      sources:
-            - namespace: bhavesh-dhera-dev
-              name: hello-world
-
-management:
-  endpoint:
-    restart:
-      enabled: true
+  application:
+    name: reload-example
+  cloud:
+    kubernetes:
+      reload:
+        enabled: true
+        mode: polling
+        period: 5000
+      config:
+        sources:
+          - name: other
+          - name: ${spring.application.name}
