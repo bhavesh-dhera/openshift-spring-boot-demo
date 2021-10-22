@@ -1,5 +1,3 @@
-spring.cloud.kubernetes.config.name: openshift-spring-boot-demo-config-map
-
 spring:
   cloud.kubernetes:
     reload:
@@ -8,7 +6,7 @@ spring:
     config:
       enabled: true
       sources:
-            - namespace: demo
+            - namespace: bhavesh-dhera-dev
               name: hello-world
 
 management:
